@@ -1,0 +1,234 @@
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Custom CSS */
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.25em;
+}
+
+p {
+    font-size: 1em;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 1em;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+header > nav > ul {
+    display: flex;
+    justify-content: center;
+    font-family: inherit;
+    list-style: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+header > nav > ul > li {
+    text-decoration: none;
+    font-family: inherit;
+}
+
+header > nav > ul > li > a {
+    padding: 1em;
+}
+
+header > nav > ul > li > a:hover {
+    padding: 1em;
+    background-color: #f0f0f0;
+}
+
+a {
+    text-decoration: none;
+    color: #1976d2;
+}
+
+main {
+    flex: 1;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+section {
+    border: 1px solid #bbb;
+    transition: border-color 0.2s ease;
+    border-radius: 0.5em;
+    padding: 1em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+section:hover {
+    background-color: rgba(0, 0, 0, 0.025);
+    transition: background-color 0.2s ease;
+    transition: box-shadow 0.2s ease;
+    border-color: #333;
+}
+
+button {
+    background-color: white;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 0.5em 1em;
+    border-radius: 0.25em;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: #f5f5f5;
+    border-color: #999;
+}
+
+button:active {
+    background-color: #e8e8e8;
+    border-color: #666;
+}
+
+.button-group {
+    padding-top: 1em;
+    display: flex;
+    gap: 0.5em;
+    flex-direction: column;
+}
+
+.url-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    justify-content: space-between;
+}
+
+.url-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    justify-content: space-between;
+}
+
+input[type="text"],
+input[type="url"] {
+    flex: 1;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 0.25em;
+    font-size: 1em;
+}
+
+.api-key-section {
+    background-color: #fce4ec;
+    border: 1px solid #f48fb1;
+    border-radius: 0.25em;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.api-key-section:hover {
+    background-color: #fce4ec;
+    transition: none;
+    border-color: #ad1457;
+}
+
+.api-key-section h3 {
+    color: #ad1457;
+}
+
+.api-key-section input[type="password"] {
+    border-color: #f48fb1;
+}
+
+.api-key-section input[type="password"]:focus {
+    border-color: #e91e63;
+}
+
+button[type="submit"] {
+    background-color: #1976d2;
+    color: white;
+    border: 1px solid #1976d2;
+}
+
+button[type="submit"]:hover {
+    background-color: #1565c0;
+    border-color: #1565c0;
+}
+
+button[type="submit"]:active {
+    background-color: #0d47a1;
+    border-color: #0d47a1;
+}
+
+textarea {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 0.25em;
+    font-size: 1em;
+    min-height: 6em;
+    resize: vertical !important;
+    overflow: auto;
+    width: 100%;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #1976d2;
+    outline: none;
+}
+
+.result-box {
+    margin-top: 1em;
+    padding: 1em;
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.25em;
+    display: none;
+}
+
+.result-box.show {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.hidden {
+    display: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}

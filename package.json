@@ -9,7 +9,8 @@
   "scripts": {
     "start": "electron-forge start",
     "dev": "nodemon --exec electron . --watch . --ext js,html,css,json",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "package": "electron-forge package",
     "make": "electron-forge make"
   },
@@ -23,6 +24,7 @@
     "@electron-forge/plugin-fuses": "^7.8.1",
     "@electron/fuses": "^1.8.0",
     "electron": "^36.5.0",
+    "jest": "^30.0.2",
     "nodemon": "^3.1.10"
   },
   "dependencies": {

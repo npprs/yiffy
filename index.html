@@ -4,245 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yiffy</title>
-    <style>
-        /* Reset CSS */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Typography */
-        h1 {
-            font-size: 2em;
-        }
-
-        h2 {
-            font-size: 1.5em;
-        }
-
-        h3 {
-            font-size: 1.25em;
-        }
-
-        p {
-            font-size: 1em;
-        }
-
-        /* Basic styles */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        header {
-            padding: 1em;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        header > nav > ul {
-            display: flex;
-            justify-content: center;
-            font-family: inherit;
-            list-style: none;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 0.5em;
-        }
-
-        header > nav > ul > li {
-            text-decoration: none;
-            font-family: inherit;
-        }
-
-        header > nav > ul > li > a {
-            padding: 1em;
-        }
-
-        header > nav > ul > li > a:hover {
-            padding: 1em;
-            background-color: #f0f0f0;
-        }
-
-        a {
-            text-decoration: none;
-            color: #1976d2;
-        }
-
-        main {
-            flex: 1;
-            padding: 1em;
-            justify-content: center;
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-            gap: 1em;
-        }
-
-        section {
-            border: 1px solid #bbb;
-            transition: border-color 0.2s ease;
-            border-radius: 0.5em;
-            padding: 1em;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 1em;
-        }
-
-        section:hover {
-            background-color: rgba(0, 0, 0, 0.025);
-            transition: background-color 0.2s ease;
-            transition: box-shadow 0.2s ease;
-            border-color: #333;
-        }
-
-        button {
-            background-color: white;
-            color: #333;
-            border: 1px solid #ccc;
-            padding: 0.5em 1em;
-            border-radius: 0.25em;
-            font-size: 1em;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        button:hover {
-            background-color: #f5f5f5;
-            border-color: #999;
-        }
-
-        button:active {
-            background-color: #e8e8e8;
-            border-color: #666;
-        }
-
-        .button-group {
-            padding-top: 1em;
-            display: flex;
-            gap: 0.5em;
-            flex-direction: column;
-        }
-
-        .url-list {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5em;
-            justify-content: space-between;
-        }
-
-        .url-item {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            gap: 0.5em;
-            justify-content: space-between;
-        }
-
-        input[type="password"],
-        input[type="url"] {
-            flex: 1;
-            padding: 0.5em;
-            border: 1px solid #ccc;
-            border-radius: 0.25em;
-            font-size: 1em;
-        }
-
-        .api-key-section {
-            background-color: #fce4ec; /* Light pink background */
-            border: 1px solid #f48fb1; /* Pink border */
-            border-radius: 0.25em;
-            padding: 1em;
-            margin-bottom: 1em;
-        }
-
-        /* Disable hover effects for API key sections */
-        .api-key-section:hover {
-            background-color: #fce4ec; /* Keep same pink background */
-            transition: none; /* Remove transition */
-            border-color: #ad1457; /* Keep original pink border */
-        }
-
-        /* Optional: Make the heading stand out more */
-        .api-key-section h3 {
-            color: #ad1457; /* Darker pink for heading */
-        }
-
-        /* Optional: Style the input differently */
-        .api-key-section input[type="password"] {
-            border-color: #f48fb1; /* Pink border for input */
-        }
-
-        .api-key-section input[type="password"]:focus {
-            border-color: #e91e63; /* Darker pink on focus */
-        }
-
-        button[type="submit"] {
-            background-color: #1976d2;
-            color: white;
-            border: 1px solid #1976d2;
-        }
-
-        button[type="submit"]:hover {
-            background-color: #1565c0;
-            border-color: #1565c0;
-        }
-
-        button[type="submit"]:active {
-            background-color: #0d47a1;
-            border-color: #0d47a1;
-        }
-
-        textarea {
-            padding: 0.5em;
-            border: 1px solid #ccc;
-            border-radius: 0.25em;
-            font-size: 1em;
-            min-height: 6em;
-            resize: vertical !important;
-            overflow: auto;
-            width: 100%; /* Add this to maintain full width */
-        }
-
-        input:focus,
-        textarea:focus {
-            border-color: #1976d2;
-            outline: none;
-        }
-
-        .result-box {
-            margin-top: 1em;
-            padding: 1em;
-            background-color: #f8f9fa;
-            border: 1px solid #e0e0e0;
-            border-radius: 0.25em;
-            display: none;
-        }
-
-        .result-box.show {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5em;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        form {
-          display: flex;
-          flex-direction: column;
-          gap: 1em;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <header>
@@ -260,61 +22,41 @@
     <main>
         <section id="preface">
             <h1>Preface</h1>
-            <p>Yiffy is a tool to help creators test their content against platforms that uses iffy for their content moderation. This tool does not endorse AI based content moderation. For creators that need to figure out what content might trigger or flag their account and disable their payment without actionable feedback this tool is meant to help with that.</p>
-            <p>Please read over <a href="#disclaimer">Disclaimer</a> and <a href="#usage">Usage</a> before using this tool.</p>
+            <p>Yiffy is a tool to help creators test their content against Gumroad's Iffy moderation tool. This is not an endorsement of AI based content moderation or Gumroad.</p>
+            <p>Flagged accounts have their payments disabled without clear explanations of what triggered the flag or how to fix it.</p>
+            <p>Please read over <a href="#disclaimer">disclaimer</a> and <a href="#usage">usage</a> before using this tool.</p>
         </section>
 
         <section id="tool">
             <h1>Tool</h1>
 
-            <section class="api-endpoint-section">
+            <section class="api-endpoint-section" style="display: none;">
                 <h2>API Endpoint</h2>
-                <input type="url" value="https://api.iffy.com/api/v1/moderate" readonly>
+                <input type="url" id="api-endpoint" value="https://api.iffy.com/api/v1/moderate" readonly>
             </section>
 
-            <section class="website-section" style="display: none;">
-                <h2>Website URL</h2>
-                <p>Enter the URL of the website you want to test content against.</p>
-                <form>
-                    <section class="api-key-section">
-                        <h3>API Key</h2>
-                        <p><a href="#disclaimer">Disclaimer</a>: Do not share your API key with anyone. Don't blindly trust input fields and enter your API key there too.</p>
-                        <p>Create an account and get an API key at <a href="https://iffy.com/docs/quickstart" target="_blank">Iffy</a>. You can see how this tool is <a href="#usage">used</a> for more information.</p>
-                        <input type="password" placeholder="iffy_a1b2c3d4e5f678901234567..." required>
-                    </section>
-                    <input type="url" placeholder="https://example.com" required>
-                    <button type="submit">Moderate</button>
-                </form>
-                <div class="result-box"></div>
+            <section class="api-key-section">
+                <h3>API Key</h3>
+                <p><strong>Important:</strong> Do not share your API key with anyone.</p>
+                <p>Create an account and get an API key at <a href="https://iffy.com/docs/quickstart" target="_blank">Iffy</a>. You can see how this tool is <a href="#usage">used</a> for more information.</p>
+                <input type="text" id="api-key" placeholder="iffy_a1b2c3d4e5f678901234567..." required>
             </section>
 
             <section class="text-section">
                 <h2>Text</h2>
-                <p>Enter the text you want to moderate. This can include any content you want to test against the platform's moderation policies.</p>
-                <form>
-                    <section class="api-key-section">
-                        <h3>API Key</h3>
-                        <p><a href="#disclaimer">Disclaimer</a>: Do not share your API key with anyone. Don't blindly trust input fields and enter your API key there too.</p>
-                        <p>Create an account and get an API key at <a href="https://iffy.com/docs/quickstart" target="_blank">Iffy</a>. You can see how this tool is <a href="#usage">used</a> for more information.</p>
-                        <input type="password" placeholder="iffy_a1b2c3d4e5f678901234567..." required>
-                    </section>
-                    <textarea placeholder="Enter text to moderate" required></textarea>
+                <p>Enter the text you want to moderate.</p>
+                <form id="text-form">
+                    <textarea id="text-content" placeholder="Enter text to moderate" required></textarea>
                     <button type="submit">Moderate</button>
                 </form>
-                <div class="result-box"></div>
+                <div id="text-results" class="result-box"></div>
             </section>
 
             <section class="images-section">
                 <h2>Images</h2>
-                <p>Enter the URLs of images you want to moderate. Add multiple URLs to test several images at once.</p>
-                <form>
-                    <section class="api-key-section">
-                        <h3>API Key</h3>
-                        <p><a href="#disclaimer">Disclaimer</a>: Do not share your API key with anyone. Don't blindly trust input fields and enter your API key there too.</p>
-                        <p>Create an account and get an API key at <a href="https://iffy.com/docs/quickstart" target="_blank">Iffy</a>. You can see how this tool is <a href="#usage">used</a> for more information.</p>
-                        <input type="password" placeholder="iffy_a1b2c3d4e5f678901234567..." required>
-                    </section>
-                    <div class="url-list">
+                <p>Enter the URLs of images you want to moderate.</p>
+                <form id="images-form">
+                    <div id="image-url-list" class="url-list">
                         <div class="url-item">
                             <input type="url" placeholder="https://example.com/image.jpg" required>
                         </div>
@@ -324,163 +66,28 @@
                         <button type="submit">Moderate</button>
                     </div>
                 </form>
-                <div class="result-box"></div>
+                <div id="images-results" class="result-box"></div>
             </section>
-          </section>
+        </section>
 
         <section id="disclaimer">
             <h1>Disclaimer</h1>
-            <p>Use your due diligence when using any tool. This tool is provided as-is and does not guarantee that your content will not be flagged or removed by any platform. DO NOT share or expose your API key to anyone. I recommend only use this tool locally.</p>
+            <p>Use due diligence when using any tool. This tool is provided as-is and does not guarantee that your content will not be flagged or removed by any platform. DO NOT share or expose your API key to anyone.</p>
         </section>
 
         <section id="usage">
             <h1>Usage</h1>
-            <p>To use this tool, you need to have an API key from the platform you want to test against. Enter your API key in the designated field and submit your content for testing. The tool will return feedback on whether your content is likely to be flagged or not.</p>
-            <p>Make sure to follow the platform's guidelines and terms of service when using this tool. This tool is not responsible for any actions taken by the platform based on the content you test.</p>
+            <p>Follow the iffy setup and acquire an API key: <b>https://iffy.com/docs/quickstart</b> (Note: that API key will not be free).</p>
+            <p>Input the API key in the <b>API Key</b> field.</p>
+            <p>Input either <b>text</b> content or <b>image URLs</b> for moderation.</p>
         </section>
 
         <section id="support">
             <h1>Support</h1>
-            <p>Check out my store if you like my work. Tips are appreciated too.</p>
+            <p>Check out my store if you like my work @ <b>https://jinxxy.com/noppers</b></p>
         </section>
     </main>
 
-    <script>
-        // Get the API URL from the readonly input
-        const IFFY_API_URL = document.querySelector('.api-endpoint-section input[type="url"]').value;
-
-        // Handle form submissions for API key and content moderation
-        document.querySelector('.add-url').addEventListener('click', function() {
-            const urlList = document.querySelector('.url-list');
-            const newItem = document.createElement('div');
-            newItem.className = 'url-item';
-            newItem.innerHTML = `
-              <div class="url-item">
-                <input type="url" placeholder="https://example.com/image.jpg" required>
-                <button type="button" class="remove-url">×</button>
-              </div>
-            `;
-
-            // Append the new item to the list
-            urlList.appendChild(newItem);
-
-            // Add event listener to the remove button
-            newItem.querySelector('.remove-url').addEventListener('click', () => {
-                newItem.remove();
-            });
-        });
-
-        // Moderate Text
-        const moderateText = async (bearerToken, text, options = {}) => {
-          return moderate(bearerToken, {
-            clientId: `text-${Date.now()}`,
-            name: options.name || 'Text Content',
-            entity: 'text',
-            content: { text },
-            passthrough: true,
-            ...options
-          });
-        }
-
-        // Moderate Image URLs
-        const moderateImages = async (bearerToken, imageUrls, options = {}) => {
-          return moderate(bearerToken, {
-            clientId: `images-${Date.now()}`,
-            name: options.name || 'Image Content',
-            entity: 'images',
-            content: {
-              text: '',
-              imageUrls: Array.isArray(imageUrls) ? imageUrls : [imageUrls]
-            },
-            passthrough: true,
-            ...options
-          });
-        }
-
-        const moderate = async (bearerToken, data) => {
-            const response = await fetch(IFFY_API_URL, {
-                method: 'POST',
-                headers: {
-                    'Authorization': `Bearer ${bearerToken}`,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            });
-
-            const result = await response.json();
-
-            if (!response.ok) {
-                console.error('API Error:', result);
-                const errorDetails = {
-                    status: response.status,
-                    statusText: response.statusText,
-                    error: result.error || result.message || 'Unknown error',
-                    details: result
-                };
-                throw new Error(JSON.stringify(errorDetails));
-            }
-            return result;
-        };
-
-        const handleSubmit = async (e) => {
-            e.preventDefault();
-
-            const form = e.target;
-            const resultBox = form.parentElement.querySelector('.result-box');
-            const apiKey = form.querySelector('input[type="password"]').value;
-            const section = form.closest('section');
-
-            let content;
-            let result;
-
-            try {
-                resultBox.innerHTML = '<p>Processing...</p>';
-                resultBox.classList.add('show');
-
-                if (section.classList.contains('text-section')) {
-                    content = form.querySelector('textarea').value;
-                    result = await moderateText(apiKey, content);
-                } else if (section.classList.contains('images-section')) {
-                    const urls = Array.from(form.querySelectorAll('input[type="url"]'))
-                        .map(input => input.value)
-                        .filter(url => url.trim());
-                    result = await moderateImages(apiKey, urls);
-                } else {
-                    throw new Error('Unknown section type');
-                }
-
-                resultBox.innerHTML = `
-                    <h3>Moderation Result</h3>
-                    <section>
-                        <b>Status: ${result.status || 'Unknown'}</b>
-                    </section>
-                    <section>
-                        <pre>${JSON.stringify(result, null, 2)}</pre>
-                    </section>
-                `;
-            } catch (error) {
-                let errorMessage;
-                try {
-                    const errorObj = JSON.parse(error.message);
-                    errorMessage = `
-                        <div style="color: #c62828;">
-                            <h4>API Error (${errorObj.status})</h4>
-                            <p><strong>Error:</strong> ${errorObj.error}</p>
-                            <details>
-                                <summary>Full Error Details</summary>
-                                <pre>${JSON.stringify(errorObj.details, null, 2)}</pre>
-                            </details>
-                        </div>
-                    `;
-                } catch {
-                    errorMessage = `<p style="color: #c62828;"><strong>Error:</strong> ${error.message}</p>`;
-                }
-                resultBox.innerHTML = errorMessage;
-            }
-        };
-
-        document.querySelector('.text-section form').addEventListener('submit', handleSubmit);
-        document.querySelector('.images-section form').addEventListener('submit', handleSubmit);
-    </script>
+    <script type="module" src="scripts/moderate.js"></script>
 </body>
 </html>
