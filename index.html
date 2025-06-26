@@ -22,7 +22,7 @@
     <main>
         <section id="preface">
             <h1>Preface</h1>
-            <p>Yiffy is a tool to help creators test their content against Gumroad's Iffy moderation tool. This is not an endorsement of AI based content moderation or Gumroad.</p>
+            <p>Yiffy is a tool to help creators test their content against Gumroad's Iffy moderation tool ahead of time. It may not give the same result as Gumroad's  internal checks.</p>
             <p>Flagged accounts have their payments disabled without clear explanations of what triggered the flag or how to fix it.</p>
             <p>Please read over <a href="#disclaimer">disclaimer</a> and <a href="#usage">usage</a> before using this tool.</p>
         </section>
@@ -54,7 +54,7 @@
 
             <section class="images-section">
                 <h2>Images</h2>
-                <p>Enter the URLs of images you want to moderate.</p>
+                <p>Enter the URLs of images you want to moderate. Note: Iffy has a image size limit.</p>
                 <form id="images-form">
                     <div id="image-url-list" class="url-list">
                         <div class="url-item">
@@ -77,9 +77,13 @@
 
         <section id="usage">
             <h1>Usage</h1>
-            <p>Follow the iffy setup and acquire an API key: <b>https://iffy.com/docs/quickstart</b> (Note: that API key will not be free).</p>
-            <p>Input the API key in the <b>API Key</b> field.</p>
-            <p>Input either <b>text</b> content or <b>image URLs</b> for moderation.</p>
+            <ul>
+                <li>Follow the Iffy setup and acquire an API key: <b>https://iffy.com/docs/quickstart</b> (Note: that API key will not be free).</li>
+                <li>Input the API key in the <b>API Key</b> field.</li>
+                <li>Input either <b>text</b> content or <b>image URLs</b> for moderation.</li>
+                <li>Click the <b>Moderate</b> button to send the request.</li>
+                <li>Visit the dashboard on Iffy for a more detailed breakdown of the results.</li>
+            </ul>
         </section>
 
         <section id="support">
